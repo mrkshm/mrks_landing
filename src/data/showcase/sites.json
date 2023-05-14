@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Legendary Plays",
+    "image": "./images/legendaryplays.png",
+    "url": "https://legendaryplays.com/"
+  },
+  {
+    "title": "Musards",
+    "image": "./images/site_musards.jpg",
+    "url": "https://musards.fr/"
+  },
+  {
+    "title": "Vadim Sher",
+    "image": "./images/site_vadim.jpg",
+    "url": "https://vadimsher.com/"
+  },
+  {
+    "title": "Envie de Fraise",
+    "image": "./images/enviedefraise.png",
+    "url": "https://enviedefraise.fr/"
+  }
+]

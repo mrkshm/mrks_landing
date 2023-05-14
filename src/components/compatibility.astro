@@ -1,0 +1,93 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+
+const frameworks: Array<CompatibilityItem> = [
+  {
+    title: "React",
+    icon: "frameworks/react",
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Preact",
+    icon: "frameworks/preact",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "Next",
+    icon: "frameworks/nextjs",
+    url: "https://nextjs.org",
+  },
+  {
+    title: "Remix",
+    icon: "frameworks/remix",
+    url: "http://remix.run",
+  },
+  {
+    title: "Svelte",
+    icon: "frameworks/svelte",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "WordPress",
+    icon: "frameworks/wordpress",
+    url: "https://www.wordpress.org/",
+  },
+];
+
+const platforms: Array<CompatibilityItem> = [
+  {
+    title: "TypeScript",
+    icon: "frameworks/typescript",
+    url: "https://www.typescriptlang.org",
+  },
+  {
+    title: "Git",
+    icon: "fa-brands:github",
+    url: "https://github.com/",
+  },
+  {
+    title: "Docker",
+    icon: "fa-brands:docker",
+    url: "https://docker.com/",
+  },
+  {
+    title: "Agile",
+    icon: "frameworks/scrum",
+    url: "https://scrum.org/",
+  },
+  {
+    title: "TailwindCSS",
+    icon: "frameworks/tailwind",
+    url: "http://tailwindcss.com",
+  },
+  {
+    title: "Figma",
+    icon: "fa-brands:figma",
+    url: "http://figma.com",
+  },
+];
+---
+
+<ContentSection title="The Stack" id="tools">
+  <Fragment slot="lead">
+    While React is a <span class="text-primary">key part</span> of my toolkit, I
+    am proficient in a <span class="text-primary">wide range</span> of modern front-end
+    technologies. I choose the <span class="text-primary">right tools</span>
+    based on <span class="text-primary">project requirements</span> to deliver optimal
+    <span class="text-primary">performance</span>, user <span
+      class="text-primary">experience</span
+    >, and <span class="text-primary">conversion rates</span>.
+  </Fragment>
+  <CompatibilityList
+    items={frameworks}
+    title="Core technologies"
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    items={platforms}
+    title="Some favorite tools"
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>

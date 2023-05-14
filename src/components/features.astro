@@ -1,0 +1,68 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Collaborative Development",
+    description:
+      "My experience with various projects has taught me the value of collaboration and iterative development. I am comfortable working within established workflows and can adapt my approach based on project requirements.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "Performance Optimization",
+    description:
+      "I understand the critical role performance plays in user experience and conversion rates. I continuously monitor and optimize performance metrics to ensure optimal user experience.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "Mobile-First Approach",
+    description:
+      "In today's mobile-driven world, I prioritize creating responsive, mobile-friendly applications. I ensure that the applications I build are optimized for the platforms where they will be used the most.",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "Integration Capabilities",
+    description:
+      "Whether it's integrating with a CMS, setting up a custom payment processor, or exploring Web3, I can navigate the technical landscape to build integrated solutions that meet your business needs.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "SEO and Accessability",
+    description:
+      "I strive to create web applications that are both SEO-friendly and accessible. I believe that digital experiences should be inclusive and usable by everyone, and that good SEO is a byproduct of well-structured, meaningful content.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Staying Current",
+    description:
+      "Leveraging the latest advancements, such as the new CSS color spaces and color manipulation techniques, is vital for maintaining a competitive edge. My commitment to continuous learning ensures that I bring the most up-to-date practices to the products we build.",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="Development Approach" id="mission">
+  <Fragment slot="lead">
+    I believe in the <span class="text-primary">power of collaboration</span> and
+    iterative development to create <span class="text-primary">superior</span> digital
+    products, enabling me to work <span class="text-primary">efficiently</span> in
+    a team setting and align with <span class="text-primary"
+      >existing processes</span
+    >.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="border-default bg-offset flex flex-col items-center gap-4 border p-6">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} />
+          </div>
+          <p class="px-4 text-center text-xl font-extrabold">{title}</p>
+          <p class="text-offset text-center text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
